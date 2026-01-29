@@ -1,14 +1,10 @@
 # Kopi Desa Landing Page
 
-A premium landing page for Kopi Desa brand, built with Next.js 15, Tailwind CSS v4, and Three.js (R3F).
+A premium landing page for Kopi Desa brand, built with Next.js 15 and Tailwind CSS v4.
 
 ## Features
-- 3D Coffee Bean Hero (Performance optimized)
-- AIDA Conversion Flow
-- WhatsApp Direct Order Integration
-- Localized (Indonesian) Content
-- **3D & Visuals**: Premium Hero Banner & 3D Elements
-- **Interactive UI**: Scroll Animations (Framer Motion) & "Bento Grid" Layouts
+- **Visuals**: Premium Hero Banner & Scroll Animations
+- **Interactive UI**: Framer Motion Interactions & "Bento Grid" Layouts
 - **Product Experience**: Skeleton Loading States & WhatsApp Direct Order
 - **AIDA Conversion Flow**: Optimized for sales (Attention, Interest, Desire, Action)
 - **Performance**: Mobile-first, fast loading, and SEO optimized
@@ -17,7 +13,7 @@ A premium landing page for Kopi Desa brand, built with Next.js 15, Tailwind CSS 
 ## Tech Stack
 - **Framework**: Next.js 15 (App Router)
 - **Styling**: Tailwind CSS v4
-- **3D**: React Three Fiber + Drei
+- **Animation**: Framer Motion
 - **Type Safety**: TypeScript
 
 ## Getting Started
@@ -25,8 +21,6 @@ A premium landing page for Kopi Desa brand, built with Next.js 15, Tailwind CSS 
 1. **Install Dependencies**
    ```bash
    npm install
-   # Also ensure 3D deps are installed:
-   npm install three @types/three @react-three/fiber @react-three/drei
    ```
 
 2. **Environment Setup**
@@ -45,7 +39,7 @@ A premium landing page for Kopi Desa brand, built with Next.js 15, Tailwind CSS 
 - `app/` - Pages and Layout (Next.js App Router)
 - `components/` - React Components
   - `sections/` - Landing page sections (Hero, Features, Products...)
-  - `three/` - 3D Scenes
+  - `utils/` - Utility components (Reveal, Skeleton...)
 - `lib/` - Data and Utilities
 
 ## Deployment
