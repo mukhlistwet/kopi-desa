@@ -25,6 +25,7 @@ export default function Hero3D() {
                     fill
                     className="object-cover opacity-60"
                     priority
+                    unoptimized
                 />
                 {/* Gradient Overlay for text readability */}
                 <div className="absolute inset-0 bg-gradient-to-r from-stone-950/90 via-stone-950/50 to-transparent" />
