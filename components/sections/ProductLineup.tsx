@@ -27,10 +27,8 @@ function ProductCard({ product, index }: { product: typeof PRODUCTS[0], index: n
                         alt={product.name}
                         onLoad={(e) => setImageLoaded(true)}
                         onError={(e) => {
-                            // If error, we might want to hide skeleton or show placeholder? 
-                            // For now, let's just force loaded so skeleton disappears (or show broken image)
+                            // Recover from error by forcing visibility (might be large file issue)
                             setImageLoaded(true);
-                            e.currentTarget.style.display = 'none'; // Optional: hide broken image
                         }}
                         className={`w-full h-full object-cover group-hover:scale-110 transition-transform duration-500`}
                         style={{ opacity: imageLoaded ? 1 : 0 }}
@@ -38,6 +36,8 @@ function ProductCard({ product, index }: { product: typeof PRODUCTS[0], index: n
                             // Check if already loaded from cache
                             if (img?.complete) setImageLoaded(true);
                         }}
+                        // @ts-ignore
+                        unoptimized="true" // Bypass Next.js optimization for large files
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-80" />
 
