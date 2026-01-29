@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: BRAND.name,
     description: HERO_CONTENT.subheadline,
-    url: "https://kopidesa.com", // Placeholder
+    url: "https://kopi-desa-ekf52xdmt1.edgeone.dev", // Placeholder
     siteName: BRAND.name,
     type: "website",
     images: [{ url: "/images/banner-hero.png", width: 1200, height: 630 }],
