@@ -25,8 +25,8 @@ function ProductCard({ product, index }: { product: typeof PRODUCTS[0], index: n
                     <img
                         src={product.image}
                         alt={product.name}
-                        onLoad={(e) => setImageLoaded(true)}
-                        onError={(e) => {
+                        onLoad={() => setImageLoaded(true)}
+                        onError={() => {
                             // Recover from error by forcing visibility (might be large file issue)
                             setImageLoaded(true);
                         }}
@@ -36,7 +36,7 @@ function ProductCard({ product, index }: { product: typeof PRODUCTS[0], index: n
                             // Check if already loaded from cache
                             if (img?.complete) setImageLoaded(true);
                         }}
-                        // @ts-ignore
+                        // @ts-expect-error unoptimized prop needed for edge case
                         unoptimized="true" // Bypass Next.js optimization for large files
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-80" />

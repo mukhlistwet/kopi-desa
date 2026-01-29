@@ -15,7 +15,7 @@ export default function SocialProof() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {TESTIMONIALS.map((t, i) => (
                         <div key={i} className="bg-stone-900 p-6 rounded-xl border border-stone-800">
-                            <p className="text-stone-300 italic mb-4">"{t.text}"</p>
+                            <p className="text-stone-300 italic mb-4">&quot;{t.text}&quot;</p>
                             <p className="text-stone-500 text-sm font-bold uppercase tracking-wider">— {t.author}</p>
                         </div>
                     ))}
