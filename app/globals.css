@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Inter', sans-serif;
+  --color-coffee-dark: #1c1917; /* stone-900 like */
+  --color-coffee-bean: #292524; /* stone-800 like */
+  --color-coffee-accent: #f59e0b; /* amber-500 */
+  --color-coffee-light: #fef3c7; /* amber-100 */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+:root {
+  --background: #0c0a09;
+  --foreground: #fafaf9;
+}
+
+body {
+  color: var(--foreground);
+  background: radial-gradient(circle at top right, #292524 0%, #0c0a09 100%);
+  font-family: var(--font-display);
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
